@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+*{
+margin:0;    
+padding:0;
+box-sizing:border-box;
+}     
+
+body{
+    background:#00D4F9;  
+    background:#131418;
+    font-family: 'Orbitron', sans-serif;
+    }
+
+    .container{
+        padding: 20px;
+        width: 360px;
+        background:#052443;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        border-radius:7px;
+        animation: /* slideIn 3s, zoomIn 6s fadeIn 8s  rotate 2s bounce 2s*/pulse 2s infinite ;
+
+    }
+    @keyframes slideIn {
+        0% {transform: translateX(-60%);}
+        100% {transform: translateX(50);}
+    }
+    @keyframes zoomIn {
+        0% {transform: scale(0);}
+        100% {transform: scale(1);}
+    }
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    @keyframes rotate {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes bounce {
+        20%, 80% {transform: translateY(90px);}
+        10% {transform: translateY(-150px);}
+    }
+    @keyframes pulse {
+        0%, 100% {transform: scale(1);}
+        50% {transform: scale(1.1);}
+    }
+
+    .container .fecha{
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .container .hora{
+        text-align: center;
+        color:#00D4F9;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
